@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d0xgmqxwlk3x2" path="res://GameObjects/Player.tscn" id="1_yvskl"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_dmyfn"]
 [ext_resource type="PackedScene" uid="uid://bt5s73nhjvfub" path="res://Level.tscn" id="5_8qg1h"]
-[ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://GameObjects/ladder.tscn" id="5_afhc4"]
+[ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://Scripts/ladder.tscn" id="5_afhc4"]
 
 [node name="World" type="Node2D"]
 

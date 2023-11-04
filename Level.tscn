@@ -86,6 +86,12 @@ scale = Vector2(0.99999, 38168.9)
 polygon = PackedVector2Array(169, 4373.25, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 387, 4374.05, 310, 4373.25)
 one_way_collision = true
 
+[node name="Platform2D15" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(-395, 2810, -394, 2847, -101, 2848, -107, 2812)
+
+[node name="Platform2D16" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(107, 2480, 107, 2515, 400, 2518, 401, 2480)
+
 [node name="Ladder" parent="." instance=ExtResource("2_j4tk6")]
 visible = false
 position = Vector2(302, -965)
