@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Ladder.gd" id="1_u63gu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k8pr"]
-size = Vector2(20, 298)
+size = Vector2(20, 412)
 
 [sub_resource type="QuadMesh" id="QuadMesh_wf3ls"]
 size = Vector2(20, 300)
@@ -12,7 +12,7 @@ size = Vector2(20, 300)
 script = ExtResource("1_u63gu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 89)
+position = Vector2(0, 96)
 shape = SubResource("RectangleShape2D_7k8pr")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
