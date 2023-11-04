@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://qkko5ly1m4by"]
+
+[ext_resource type="PackedScene" uid="uid://bi7admw643m2r" path="res://scenes/World.tscn" id="1_py3j4"]
+[ext_resource type="Script" path="res://game.gd" id="2_mmsk8"]
+[ext_resource type="PackedScene" uid="uid://bklwbmg5im8qb" path="res://pause_menu.tscn" id="2_pg8us"]
+
+[node name="World" instance=ExtResource("1_py3j4")]
+script = ExtResource("2_mmsk8")
+
+[node name="PauseMenu" parent="Player/Camera2D" index="0" instance=ExtResource("2_pg8us")]
+visible = false
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -174.0
+offset_top = -184.0
+offset_right = -174.0
+offset_bottom = -184.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(5, 5)
