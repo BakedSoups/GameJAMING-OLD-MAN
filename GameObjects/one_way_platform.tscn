@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://chl311yrvphew"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_c4n7t"]
+size = Vector2(200, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k08f"]
+size = Vector2(202, 52)
+
+[node name="OneWayPlatform" type="StaticBody2D"]
+position = Vector2(57, -61)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(275, -42)
+mesh = SubResource("QuadMesh_c4n7t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(275, -42)
+shape = SubResource("RectangleShape2D_3k08f")
+one_way_collision = true

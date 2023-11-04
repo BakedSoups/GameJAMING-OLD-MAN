@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b2f8lmqmnj5bg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Container" type="Container" parent="CanvasLayer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.002
+anchor_bottom = 1.0
+offset_right = -0.304077
+
+[node name="Button" type="Button" parent="CanvasLayer/NinePatchRect/Container"]
+layout_mode = 2

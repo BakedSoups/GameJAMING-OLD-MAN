@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbqf0ixapq2an"]
+
+[ext_resource type="Script" path="res://Scripts/grappling_hook.gd" id="1_jkvln"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_jkvln")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

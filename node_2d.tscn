@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://nk58a27nd6iv"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_od0ys"]
+[ext_resource type="PackedScene" uid="uid://bt3gif2je4jqu" path="res://character_body_2d.tscn" id="1_r8tqo"]
+[ext_resource type="PackedScene" uid="uid://jqbo4fjhjttw" path="res://pause_menu.tscn" id="3_0n566"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ovs2p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8upj"]
+size = Vector2(426, 65)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(218, 69)
+script = ExtResource("1_od0ys")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_r8tqo")]
+position = Vector2(0, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+position = Vector2(16, 336)
+scale = Vector2(441.25, 103.5)
+mesh = SubResource("BoxMesh_ovs2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(10, 317.5)
+shape = SubResource("RectangleShape2D_k8upj")
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_0n566")]
+visible = false
+offset_left = 124.0
+offset_top = 122.0
+offset_right = 124.0
+offset_bottom = 122.0
+scale = Vector2(3.44, 3.68)
+size_flags_horizontal = 4

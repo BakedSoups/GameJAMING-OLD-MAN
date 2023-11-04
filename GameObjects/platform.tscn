@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b7kpklbhtqc74"]
+
+[node name="Platform" type="StaticBody2D"]
+position = Vector2(7, 135)

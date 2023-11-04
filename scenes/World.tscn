@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi7admw643m2r"]
+
+[ext_resource type="PackedScene" uid="uid://d0xgmqxwlk3x2" path="res://GameObjects/Player.tscn" id="1_yvskl"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="2_dmyfn"]
+[ext_resource type="PackedScene" uid="uid://bt5s73nhjvfub" path="res://Level.tscn" id="5_8qg1h"]
+[ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://GameObjects/ladder.tscn" id="5_afhc4"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_yvskl")]
+script = ExtResource("2_dmyfn")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 0)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Ladder" parent="." instance=ExtResource("5_afhc4")]
+position = Vector2(-367, -1185)
+scale = Vector2(1, 3.16)
+
+[node name="Level" parent="." instance=ExtResource("5_8qg1h")]
+position = Vector2(-676, -146)
