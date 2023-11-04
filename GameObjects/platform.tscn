@@ -1,4 +1,17 @@
-[gd_scene format=3 uid="uid://b7kpklbhtqc74"]
+[gd_scene load_steps=3 format=3 uid="uid://b7kpklbhtqc74"]
 
-[node name="Platform" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0ar7"]
+size = Vector2(9, 98)
+
+[sub_resource type="QuadMesh" id="QuadMesh_dedb6"]
+size = Vector2(10, 100)
+
+[node name="Platform" type="StaticBody2D" groups=["Wall"]]
 position = Vector2(7, 135)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_l0ar7")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("QuadMesh_dedb6")
