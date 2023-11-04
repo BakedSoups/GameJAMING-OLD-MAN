@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 500.0
 
+@onready var animator = $AnimatedSprite2D
+
 var climbing = false
 var ladderJump = false
 
@@ -69,7 +71,14 @@ func _physics_process(delta):
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:
 			velocity.x = direction * SPEED
+			if lr != 1: 
+				animator.flip_h = true
+			else:
+				animator.flip_h = true
+			animator.play("Walk")
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+			##idle animationm 
+			animator.play("Idle")
 
 		move_and_slide()

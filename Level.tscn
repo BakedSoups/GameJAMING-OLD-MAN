@@ -45,7 +45,20 @@ position = Vector2(-5, -130.001)
 scale = Vector2(1, 1.01147)
 polygon = PackedVector2Array(-250, 3603.68, -251, 3442.53, -223, 3430, 398, 3427.7, 402, 2766.28, 630, 2770.23, 637, 3605.65)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground+Platforms/2d level ground" groups=["Wall"]]
+
+[node name="2d level ground" type="CollisionPolygon2D" parent="Ground+Platforms/2d level ground/StaticBody2D"]
+position = Vector2(-5, -130.001)
+scale = Vector2(1, 1.01147)
+polygon = PackedVector2Array(-250, 3603.68, -251, 3442.53, -223, 3430, 398, 3427.7, 402, 2766.28, 630, 2770.23, 637, 3605.65)
+
 [node name="Ground Level" type="CollisionPolygon2D" parent="Ground+Platforms" groups=["Wall"]]
+position = Vector2(-6, 4)
+polygon = PackedVector2Array(-630, 5132, -640, 4960, -241, 4953, -244, 4837, -15, 4833, -14, 4694, 220, 4695, 226, 4536, 632, 4541, 630, 5129)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground+Platforms/Ground Level" groups=["Wall"]]
+
+[node name="Ground Level" type="CollisionPolygon2D" parent="Ground+Platforms/Ground Level/StaticBody2D" groups=["Wall"]]
 position = Vector2(-6, 4)
 polygon = PackedVector2Array(-630, 5132, -640, 4960, -241, 4953, -244, 4837, -15, 4833, -14, 4694, 220, 4695, 226, 4536, 632, 4541, 630, 5129)
 
