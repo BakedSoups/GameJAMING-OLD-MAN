@@ -74,7 +74,7 @@ func _physics_process(delta):
 			if lr != 1: 
 				animator.flip_h = true
 			else:
-				animator.flip_h = true
+				animator.flip_h = false
 			animator.play("Walk")
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
