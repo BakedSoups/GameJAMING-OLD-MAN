@@ -13,131 +13,14 @@ texture = ExtResource("1_b7vsb")
 [node name="Ground+Platforms" type="StaticBody2D" parent="."]
 position = Vector2(642, -4465)
 
-[node name="Platform2D13" type="CollisionPolygon2D" parent="Ground+Platforms"]
-visible = false
-position = Vector2(120, -961893)
-scale = Vector2(0.999995, 195.369)
-polygon = PackedVector2Array(169, 4373.25, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 387, 4374.05, 310, 4373.25)
-one_way_collision = true
-
-[node name="ground" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(398, -116)
-polygon = PackedVector2Array(-640, 4956, -247, 4953, -244, 5119, -641, 5120)
-
-[node name="Platform2D5" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(-10, -33)
-polygon = PackedVector2Array(169, 4392, 169, 4364, 455, 4363, 455, 4394)
-one_way_collision = true
-
-[node name="Platform2D6" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(-414, -132)
-polygon = PackedVector2Array(169, 4392, 169, 4364, 376.438, 4363.27, 455, 4363, 455, 4394)
-one_way_collision = true
-
-[node name="Platform2D7" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(-772, -1796)
-scale = Vector2(1, 1.35699)
-polygon = PackedVector2Array(169, 4392, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 387.669, 4393.53, 304, 4391.33)
-one_way_collision = true
-
-[node name="2d level ground" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(-5, -130.001)
-scale = Vector2(1, 1.01147)
-polygon = PackedVector2Array(-250, 3603.68, -251, 3442.53, -223, 3430, 398, 3427.7, 402, 2766.28, 630, 2770.23, 637, 3605.65)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground+Platforms/2d level ground" groups=["Wall"]]
-
-[node name="Ground Level" type="CollisionPolygon2D" parent="Ground+Platforms" groups=["Wall"]]
-position = Vector2(-6, 4)
-polygon = PackedVector2Array(-630, 5132, -640, 4960, -241, 4953, -244, 4837, -15, 4833, -14, 4694, 220, 4695, 226, 4536, 632, 4541, 630, 5129)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground+Platforms/Ground Level" groups=["Wall"]]
-
-[node name="Ground Level" type="CollisionPolygon2D" parent="Ground+Platforms/Ground Level/StaticBody2D" groups=["Wall"]]
-position = Vector2(-6, 4)
-polygon = PackedVector2Array(-630, 5132, -640, 4960, -241, 4953, -244, 4837, -15, 4833, -14, 4694, 220, 4695, 226, 4536, 632, 4541, 630, 5129)
-
-[node name="Platform2D8" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(-802, -2904)
-scale = Vector2(1, 1.42488)
-polygon = PackedVector2Array(169, 4392, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 449, 4386.32, 387.669, 4393.53, 304, 4391.33)
-one_way_collision = true
-
-[node name="Platform2D9" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(20.9999, -2894)
-scale = Vector2(1, 1.39052)
-polygon = PackedVector2Array(169, 4392, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 387.669, 4393.53, 304, 4391.33)
-one_way_collision = true
-
-[node name="Platform2D10" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(36, -5472)
-scale = Vector2(0.999999, 1.93356)
-polygon = PackedVector2Array(169, 4381.05, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 382, 4382.6, 309, 4380.01)
-one_way_collision = true
-
-[node name="Platform2D11" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(30, -13548)
-scale = Vector2(0.999999, 3.73864)
-polygon = PackedVector2Array(169, 4373.25, 169, 4364, 265.334, 4363.66, 313.618, 4363.49, 376.438, 4363.27, 455, 4363, 455, 4394, 387, 4374.05, 313, 4372.18)
-one_way_collision = true
-
-[node name="Platform2D12" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(59.9999, -64222.8)
-scale = Vector2(0.999998, 13.9774)
-polygon = PackedVector2Array(169, 4373.25, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 387, 4374.05, 310, 4373.25)
-one_way_collision = true
-
-[node name="Platform2D14" type="CollisionPolygon2D" parent="Ground+Platforms"]
-visible = false
-position = Vector2(239.999, -1.88886e+08)
-scale = Vector2(0.99999, 38168.9)
-polygon = PackedVector2Array(169, 4373.25, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 387, 4374.05, 310, 4373.25)
-one_way_collision = true
-
-[node name="Platform2D15" type="CollisionPolygon2D" parent="Ground+Platforms"]
-polygon = PackedVector2Array(-395, 2810, -394, 2847, -101, 2848, -107, 2812)
-one_way_collision = true
-
-[node name="Platform2D16" type="CollisionPolygon2D" parent="Ground+Platforms"]
-polygon = PackedVector2Array(107, 2480, 107, 2515, 400, 2518, 401, 2480)
-one_way_collision = true
-
-[node name="Platform2D17" type="CollisionPolygon2D" parent="Ground+Platforms"]
-polygon = PackedVector2Array(374, 1299, 372, 1506, 626, 1509, 626, 1300)
-
-[node name="Platform2D18" type="CollisionPolygon2D" parent="Ground+Platforms"]
-position = Vector2(-1, 0)
-polygon = PackedVector2Array(221, 1080, 220, 1112, 627, 1113, 626, 1079, 326.386, 1079.74)
-one_way_collision = true
-
-[node name="Platform2D19" type="CollisionPolygon2D" parent="Ground+Platforms"]
-polygon = PackedVector2Array(218, 896, 627, 901, 625, 863, 215, 866)
-one_way_collision = true
-
-[node name="Platform2D20" type="CollisionPolygon2D" parent="Ground+Platforms"]
-polygon = PackedVector2Array(217, 870, 218, 1140, -651, 1140, -650, 863)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(-597, 5039, -594, 4919, -227, 4920, -226, 4839, -7, 4836, -6, 4743, 219, 4746, 220, 4637, 595, 4637, 601, 5038)
 
 [node name="Ladder" parent="." instance=ExtResource("2_j4tk6")]
-visible = false
-position = Vector2(314, -1051)
+position = Vector2(345, -993)
 scale = Vector2(0.559999, 2.88)
 
-[node name="Ladder2" parent="." instance=ExtResource("2_j4tk6")]
-visible = false
-position = Vector2(175, -2005)
-scale = Vector2(1.14088, -5.77472)
+[node name="Border" type="StaticBody2D" parent="."]
 
-[node name="Ladder3" parent="." instance=ExtResource("2_j4tk6")]
-visible = false
-position = Vector2(390, -2753)
-scale = Vector2(1.14088, -2.29471)
-
-[node name="Ladder4" parent="." instance=ExtResource("2_j4tk6")]
-visible = false
-position = Vector2(643, -2767)
-scale = Vector2(1.14088, -2.29471)
-
-[node name="Ladder5" parent="." instance=ExtResource("2_j4tk6")]
-visible = false
-position = Vector2(858, -2767)
-scale = Vector2(1.14088, -2.29471)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border"]
+polygon = PackedVector2Array(47, 575, 46, -14140, 1237, -14139, 1236, 575, 1557, 582, 1563, -14414, -462, -14408, -392, 1199, 71, 1212)
