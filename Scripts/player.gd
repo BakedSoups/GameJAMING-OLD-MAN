@@ -22,8 +22,14 @@ var gravity = 1200
 
 var hook = preload("res://GameObjects/grappling_hook.tscn")
 var h
+var hooked = false
+
+var wing = preload("res://GameObjects/wings.tscn")
+var w
+var winged = false
 
 func shoot():
+
 	if Input.is_action_just_pressed("ui_select") and not dashing and not hasFired:
 		hasFired = true
 		velocity.y = 0
@@ -31,6 +37,12 @@ func shoot():
 		h = hook.instantiate()
 		h.position = Vector2(position.x, position.y - 40)
 		get_parent().add_child(h)
+		
+func bodyFun():
+	if winged:
+		w = wing.instantiate()
+		w.position = Vector2(position.x, position.y)
+		add_child(w)
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_left") and not dashing:
@@ -69,10 +81,9 @@ func _physics_process(delta):
 			elif climbing:
 				ladderJump = true;
 				velocity.y = JUMP_VELOCITY
-			elif doubleJump:
+			elif doubleJump and winged:
 				doubleJump = false
 				velocity.y = JUMP_VELOCITY
-				
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:
 			velocity.x = direction * SPEED

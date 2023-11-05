@@ -8,31 +8,31 @@
 size = Vector2(66, 99)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8k51o"]
-atlas = ExtResource("2_celyn")
+atlas = ExtResource("2_3lwo5")
 region = Rect2(256, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jffnr"]
-atlas = ExtResource("2_celyn")
+atlas = ExtResource("2_3lwo5")
 region = Rect2(384, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xdb2g"]
-atlas = ExtResource("2_celyn")
+atlas = ExtResource("2_3lwo5")
 region = Rect2(416, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ah1xm"]
-atlas = ExtResource("2_celyn")
+atlas = ExtResource("2_3lwo5")
 region = Rect2(448, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l00p7"]
-atlas = ExtResource("2_celyn")
+atlas = ExtResource("2_3lwo5")
 region = Rect2(480, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ekwyj"]
-atlas = ExtResource("2_celyn")
+atlas = ExtResource("2_3lwo5")
 region = Rect2(512, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ifs7g"]
-atlas = ExtResource("2_celyn")
+atlas = ExtResource("2_3lwo5")
 region = Rect2(544, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qj7h0"]
@@ -95,7 +95,7 @@ script = ExtResource("1_glowi")
 visible = false
 position = Vector2(5.96046e-08, -67)
 scale = Vector2(0.515625, 1)
-texture = ExtResource("1_a8m86")
+texture = ExtResource("1_thwj8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -58.5)
