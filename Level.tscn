@@ -47,11 +47,6 @@ polygon = PackedVector2Array(-250, 3603.68, -251, 3442.53, -223, 3430, 398, 3427
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground+Platforms/2d level ground" groups=["Wall"]]
 
-[node name="2d level ground" type="CollisionPolygon2D" parent="Ground+Platforms/2d level ground/StaticBody2D"]
-position = Vector2(-5, -130.001)
-scale = Vector2(1, 1.01147)
-polygon = PackedVector2Array(-250, 3603.68, -251, 3442.53, -223, 3430, 398, 3427.7, 402, 2766.28, 630, 2770.23, 637, 3605.65)
-
 [node name="Ground Level" type="CollisionPolygon2D" parent="Ground+Platforms" groups=["Wall"]]
 position = Vector2(-6, 4)
 polygon = PackedVector2Array(-630, 5132, -640, 4960, -241, 4953, -244, 4837, -15, 4833, -14, 4694, 220, 4695, 226, 4536, 632, 4541, 630, 5129)
@@ -98,6 +93,29 @@ position = Vector2(239.999, -1.88886e+08)
 scale = Vector2(0.99999, 38168.9)
 polygon = PackedVector2Array(169, 4373.25, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 387, 4374.05, 310, 4373.25)
 one_way_collision = true
+
+[node name="Platform2D15" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(-395, 2810, -394, 2847, -101, 2848, -107, 2812)
+one_way_collision = true
+
+[node name="Platform2D16" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(107, 2480, 107, 2515, 400, 2518, 401, 2480)
+one_way_collision = true
+
+[node name="Platform2D17" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(374, 1299, 372, 1506, 626, 1509, 626, 1300)
+
+[node name="Platform2D18" type="CollisionPolygon2D" parent="Ground+Platforms"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(221, 1080, 220, 1112, 627, 1113, 626, 1079, 326.386, 1079.74)
+one_way_collision = true
+
+[node name="Platform2D19" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(218, 896, 627, 901, 625, 863, 215, 866)
+one_way_collision = true
+
+[node name="Platform2D20" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(217, 870, 218, 1140, -651, 1140, -650, 863)
 
 [node name="Ladder" parent="." instance=ExtResource("2_j4tk6")]
 visible = false
