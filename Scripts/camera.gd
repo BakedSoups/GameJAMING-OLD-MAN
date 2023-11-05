@@ -11,3 +11,4 @@ func _physics_process(delta):
 			position.y -= 800
 		else:
 			position.y += 800
+	#comment ehre
