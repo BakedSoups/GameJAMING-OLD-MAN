@@ -7,9 +7,8 @@
 [node name="World" instance=ExtResource("1_py3j4")]
 script = ExtResource("2_mmsk8")
 
-[node name="PauseMenu" parent="Player/Camera2D" index="0" instance=ExtResource("2_pg8us")]
-visible = false
-z_index = 1
+[node name="Player@Camera2D@PauseMenu" parent="." index="0" instance=ExtResource("2_pg8us")]
+z_as_relative = false
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
