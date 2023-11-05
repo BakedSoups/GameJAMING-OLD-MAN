@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://capyhmb3cadc0"]
 
 [ext_resource type="Script" path="res://Scripts/Wings.gd" id="1_8l8c6"]
-[ext_resource type="Texture2D" uid="uid://dw3w4k7b1i3vt" path="res://Images/icon.svg" id="2_cc5d8"]
+[ext_resource type="Texture2D" uid="uid://dw3w4k7b1i3vt" path="res://icon.svg" id="2_cc5d8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ru26d"]
 

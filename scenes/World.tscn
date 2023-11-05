@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bi7admw643m2r"]
+[gd_scene load_steps=8 format=3 uid="uid://bi7admw643m2r"]
 
 [ext_resource type="PackedScene" uid="uid://d0xgmqxwlk3x2" path="res://GameObjects/Player.tscn" id="1_yvskl"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_dmyfn"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://Scripts/ladder.tscn" id="5_afhc4"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="5_v4ydk"]
 [ext_resource type="PackedScene" uid="uid://capyhmb3cadc0" path="res://GameObjects/wings.tscn" id="6_q1y0m"]
+[ext_resource type="Texture2D" uid="uid://b7yrniulkworo" path="res://Images/LiveReaction.png" id="7_aqmv3"]
 
 [node name="World" type="Node2D"]
 
@@ -26,6 +27,10 @@ position = Vector2(-584, -180)
 position = Vector2(-8, -299)
 zoom = Vector2(0.5, 0.5)
 script = ExtResource("5_v4ydk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+scale = Vector2(1.78737, 1.73255)
+texture = ExtResource("7_aqmv3")
 
 [node name="Wings" parent="." instance=ExtResource("6_q1y0m")]
 position = Vector2(601, -202)

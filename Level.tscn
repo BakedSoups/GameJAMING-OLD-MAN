@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bt5s73nhjvfub"]
 
-[ext_resource type="Texture2D" uid="uid://dkg5r3nyr7m4w" path="res://GameObjects/level_.png" id="1_y3sbp"]
+[ext_resource type="Texture2D" uid="uid://c65kmsf8wv2ud" path="res://2level_Final_rough_draft.png" id="1_b7vsb"]
 [ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://Scripts/ladder.tscn" id="2_j4tk6"]
 
 [node name="Level" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(649, -11002)
-scale = Vector2(0.609309, 0.955698)
-texture = ExtResource("1_y3sbp")
+position = Vector2(642, -6782)
+scale = Vector2(1.69751, 1.79628)
+texture = ExtResource("1_b7vsb")
 
 [node name="Ground+Platforms" type="StaticBody2D" parent="."]
 position = Vector2(642, -4465)

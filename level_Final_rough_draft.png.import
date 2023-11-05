@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh67ghaoslk61"
-path="res://.godot/imported/LevelLayout23_.png-6ef706e5b53a4d873734b38390392b35.ctex"
+uid="uid://qbyyd2k2hrrf"
+path="res://.godot/imported/level_Final_rough_draft.png-764807e5fb25b44f2dc90895eb56383b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameObjects/LevelLayout23_.png"
-dest_files=["res://.godot/imported/LevelLayout23_.png-6ef706e5b53a4d873734b38390392b35.ctex"]
+source_file="res://level_Final_rough_draft.png"
+dest_files=["res://.godot/imported/level_Final_rough_draft.png-764807e5fb25b44f2dc90895eb56383b.ctex"]
 
 [params]
 

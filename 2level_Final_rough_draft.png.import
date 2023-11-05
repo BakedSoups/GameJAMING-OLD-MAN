@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs6vp5c48q7ot"
-path="res://.godot/imported/LevelLayout_.png-c67d58efde8a34c22ab54c6dfdff27a8.ctex"
+uid="uid://c65kmsf8wv2ud"
+path="res://.godot/imported/2level_Final_rough_draft.png-d3405f4ae32659cf942c6846f2c3c510.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameObjects/LevelLayout_.png"
-dest_files=["res://.godot/imported/LevelLayout_.png-c67d58efde8a34c22ab54c6dfdff27a8.ctex"]
+source_file="res://2level_Final_rough_draft.png"
+dest_files=["res://.godot/imported/2level_Final_rough_draft.png-d3405f4ae32659cf942c6846f2c3c510.ctex"]
 
 [params]
 
