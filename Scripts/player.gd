@@ -24,7 +24,7 @@ var hook = preload("res://GameObjects/grappling_hook.tscn")
 var h
 
 func shoot():
-	if Input.is_key_pressed(KEY_Z) and not dashing and not hasFired:
+	if Input.is_action_just_pressed("ui_select") and not dashing and not hasFired:
 		hasFired = true
 		velocity.y = 0
 		dashing = true
@@ -38,6 +38,11 @@ func _physics_process(delta):
 	elif Input.is_action_just_pressed("ui_right") and not dashing:
 		lr = 1
 	shoot()
+	if is_on_floor(): 
+		$AnimatedSprite2D/RightDust.emitting = true
+		$AnimatedSprite2D/LeftDust.emitting = true
+		pass
+	
 	if not dashing:
 		if is_on_floor() or climbing:
 			doubleJump = true

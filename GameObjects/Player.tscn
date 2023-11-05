@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0xgmqxwlk3x2"]
+[gd_scene load_steps=15 format=3 uid="uid://d0xgmqxwlk3x2"]
 
 [ext_resource type="Texture2D" uid="uid://dw3w4k7b1i3vt" path="res://icon.svg" id="1_a8m86"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_glowi"]
 [ext_resource type="Texture2D" uid="uid://d1g7t57bj8gmw" path="res://characters.png" id="2_celyn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nalvi"]
@@ -68,7 +69,27 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vs0db"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4kkj1"]
+lifetime_randomness = 1.0
+emission_shape = 4
+emission_point_count = 2
+particle_flag_disable_z = true
+direction = Vector3(0, 50, 0)
+spread = 28.95
+flatness = 1.0
+gravity = Vector3(0, -100, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+angular_velocity_max = 33.7
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 5.0
+scale_max = 10.0
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_glowi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -86,3 +107,29 @@ position = Vector2(-3, -79)
 scale = Vector2(5.53125, 4.46875)
 sprite_frames = SubResource("SpriteFrames_qj7h0")
 animation = &"Walk"
+
+[node name="RightDust" type="GPUParticles2D" parent="AnimatedSprite2D"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_vs0db")
+position = Vector2(4.92312, 15.537)
+rotation = -1.5711
+emitting = false
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_4kkj1")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+collision_base_size = 0.0
+
+[node name="LeftDust" type="GPUParticles2D" parent="AnimatedSprite2D"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_vs0db")
+position = Vector2(-5, 14.818)
+rotation = 1.56119
+emitting = false
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_4kkj1")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+collision_base_size = 0.0
