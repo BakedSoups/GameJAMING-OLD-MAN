@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bt5s73nhjvfub"]
 
-[ext_resource type="Texture2D" uid="uid://c65kmsf8wv2ud" path="res://2level_Final_rough_draft.png" id="1_b7vsb"]
+[ext_resource type="Texture2D" uid="uid://cgchkhuiqbtoe" path="res://2level Final draft.png" id="1_vgf2j"]
 [ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://Scripts/ladder.tscn" id="2_j4tk6"]
 
 [node name="Level" type="Node2D"]
@@ -8,13 +8,16 @@
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(642, -6782)
 scale = Vector2(1.69751, 1.79628)
-texture = ExtResource("1_b7vsb")
+texture = ExtResource("1_vgf2j")
 
 [node name="Ground+Platforms" type="StaticBody2D" parent="."]
 position = Vector2(642, -4465)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground+Platforms"]
+[node name="Ground1" type="CollisionPolygon2D" parent="Ground+Platforms"]
 polygon = PackedVector2Array(-597, 5039, -594, 4919, -227, 4920, -226, 4839, -7, 4836, -6, 4743, 219, 4746, 220, 4637, 595, 4637, 601, 5038)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(-225, 3941, -221, 3822, 378, 3827, 381, 3376, 593, 3379, 594, 3949, -224, 3947)
 
 [node name="Ladder" parent="." instance=ExtResource("2_j4tk6")]
 position = Vector2(345, -993)
