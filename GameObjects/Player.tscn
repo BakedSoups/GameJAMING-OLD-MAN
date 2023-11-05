@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0xgmqxwlk3x2"]
+[gd_scene load_steps=14 format=3 uid="uid://d0xgmqxwlk3x2"]
 
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_k0xdu"]
 [ext_resource type="Texture2D" uid="uid://dw3w4k7b1i3vt" path="res://icon.svg" id="1_thwj8"]
 [ext_resource type="Texture2D" uid="uid://d1g7t57bj8gmw" path="res://characters.png" id="2_3lwo5"]
 
@@ -68,7 +69,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hqulr"]
+particle_flag_disable_z = true
+direction = Vector3(10, 0, 0)
+spread = 62.64
+gravity = Vector3(0, -90, 0)
+initial_velocity_min = 14.85
+initial_velocity_max = 88.9
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 4.0
+scale_max = 7.0
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_k0xdu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -86,3 +100,23 @@ position = Vector2(-3, -79)
 scale = Vector2(5.53125, 4.46875)
 sprite_frames = SubResource("SpriteFrames_qj7h0")
 animation = &"Walk"
+
+[node name="LeftDust" type="GPUParticles2D" parent="."]
+position = Vector2(-27, -11)
+rotation = 3.1647
+emitting = false
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_hqulr")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+
+[node name="RightDust" type="GPUParticles2D" parent="."]
+position = Vector2(23, -10)
+rotation = 0.0133776
+emitting = false
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_hqulr")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0

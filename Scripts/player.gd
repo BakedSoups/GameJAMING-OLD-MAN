@@ -53,7 +53,7 @@ func ageMod():
 		winged = true
 
 func shoot():
-	if Input.is_key_pressed(KEY_Z) and not dashing and not hasFired:
+	if Input.is_action_just_pressed("ui_select") and not dashing and not hasFired:
 		hasFired = true
 		velocity.y = 0
 		dashing = true
@@ -73,6 +73,9 @@ func _physics_process(delta):
 	elif Input.is_action_just_pressed("ui_right") and not dashing:
 		lr = 1
 	shoot()
+	if is_on_floor():
+		$LeftDust.emitting = true
+		$RightDust.emitting = true
 	if not dashing:
 		if is_on_floor() or climbing:
 			doubleJump = true
