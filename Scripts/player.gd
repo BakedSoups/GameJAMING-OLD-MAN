@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 500.0
+var SPEED = 500.0
 
 @onready var animator = $AnimatedSprite2D
 
@@ -14,7 +14,7 @@ var dashing = false
 var lr = 1
 var hasFired = false
 
-const JUMP_VELOCITY = -800.0
+var JUMP_VELOCITY = -800.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -26,6 +26,31 @@ var h
 var wing = preload("res://GameObjects/wings.tscn")
 var w
 var winged = false
+
+var age = 0
+const YOUNG_SPEED = 800
+const ADULT_SPEED = 500
+const OLD_SPEED = 200
+const YOUNG_JUMP = -800
+const ADULT_JUMP = 500
+const OLD_JUMP = 200
+
+func _ready():
+	ageMod()
+
+func ageMod():
+	if age == 0:
+		SPEED = YOUNG_SPEED
+		JUMP_VELOCITY = YOUNG_JUMP
+		winged = true
+	elif age == 1:
+		SPEED = ADULT_SPEED
+		JUMP_VELOCITY = ADULT_JUMP
+		winged = false
+	elif age == 2:
+		SPEED = OLD_SPEED
+		JUMP_VELOCITY = OLD_JUMP
+		winged = true
 
 func shoot():
 	if Input.is_key_pressed(KEY_Z) and not dashing and not hasFired:
