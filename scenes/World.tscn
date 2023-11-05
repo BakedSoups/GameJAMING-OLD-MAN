@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bi7admw643m2r"]
+[gd_scene load_steps=7 format=3 uid="uid://bi7admw643m2r"]
 
 [ext_resource type="PackedScene" uid="uid://d0xgmqxwlk3x2" path="res://GameObjects/Player.tscn" id="1_yvskl"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_dmyfn"]
 [ext_resource type="PackedScene" uid="uid://bt5s73nhjvfub" path="res://Level.tscn" id="5_8qg1h"]
 [ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://Scripts/ladder.tscn" id="5_afhc4"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="5_v4ydk"]
+[ext_resource type="PackedScene" uid="uid://capyhmb3cadc0" path="res://GameObjects/wings.tscn" id="6_q1y0m"]
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_yvskl")]
+top_level = true
+position = Vector2(-81, 121)
 script = ExtResource("2_dmyfn")
 
 [node name="Ladder" parent="." instance=ExtResource("5_afhc4")]
@@ -23,3 +26,6 @@ position = Vector2(-584, -180)
 position = Vector2(-8, -299)
 zoom = Vector2(0.5, 0.5)
 script = ExtResource("5_v4ydk")
+
+[node name="Wings" parent="." instance=ExtResource("6_q1y0m")]
+position = Vector2(601, -202)

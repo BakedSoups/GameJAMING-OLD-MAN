@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://capyhmb3cadc0"]
+
+[ext_resource type="Script" path="res://Scripts/Wings.gd" id="1_8l8c6"]
+[ext_resource type="Texture2D" uid="uid://dw3w4k7b1i3vt" path="res://Images/icon.svg" id="2_cc5d8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru26d"]
+
+[node name="Wings" type="Area2D"]
+script = ExtResource("1_8l8c6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cc5d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(-6.71659, -6.52932)
+shape = SubResource("RectangleShape2D_ru26d")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

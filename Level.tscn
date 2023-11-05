@@ -1,9 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bt5s73nhjvfub"]
 
-[ext_resource type="Texture2D" uid="uid://dh67ghaoslk61" path="res://GameObjects/LevelLayout23_.png" id="1_4at5c"]
+[ext_resource type="Texture2D" uid="uid://dkg5r3nyr7m4w" path="res://GameObjects/level_.png" id="1_y3sbp"]
 [ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://Scripts/ladder.tscn" id="2_j4tk6"]
 
 [node name="Level" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(649, -11002)
+scale = Vector2(0.609309, 0.955698)
+texture = ExtResource("1_y3sbp")
 
 [node name="Ground+Platforms" type="StaticBody2D" parent="."]
 position = Vector2(642, -4465)
@@ -14,11 +19,6 @@ position = Vector2(120, -961893)
 scale = Vector2(0.999995, 195.369)
 polygon = PackedVector2Array(169, 4373.25, 169, 4364, 265.334, 4363.66, 376.438, 4363.27, 455, 4363, 455, 4394, 387, 4374.05, 310, 4373.25)
 one_way_collision = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Ground+Platforms"]
-position = Vector2(-11, -311.086)
-scale = Vector2(0.830404, 0.886244)
-texture = ExtResource("1_4at5c")
 
 [node name="ground" type="CollisionPolygon2D" parent="Ground+Platforms"]
 position = Vector2(398, -116)
@@ -119,10 +119,25 @@ polygon = PackedVector2Array(217, 870, 218, 1140, -651, 1140, -650, 863)
 
 [node name="Ladder" parent="." instance=ExtResource("2_j4tk6")]
 visible = false
-position = Vector2(302, -965)
-scale = Vector2(1, 4.24)
+position = Vector2(314, -1051)
+scale = Vector2(0.559999, 2.88)
 
 [node name="Ladder2" parent="." instance=ExtResource("2_j4tk6")]
 visible = false
-position = Vector2(157, -2102)
-scale = Vector2(1.14088, -4.01472)
+position = Vector2(175, -2005)
+scale = Vector2(1.14088, -5.77472)
+
+[node name="Ladder3" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(390, -2753)
+scale = Vector2(1.14088, -2.29471)
+
+[node name="Ladder4" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(643, -2767)
+scale = Vector2(1.14088, -2.29471)
+
+[node name="Ladder5" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(858, -2767)
+scale = Vector2(1.14088, -2.29471)

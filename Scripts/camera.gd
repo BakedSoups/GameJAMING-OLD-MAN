@@ -8,9 +8,9 @@ func _ready():
 
 func _physics_process(delta):
 	var p = get_parent().get_node("Player")
-	if abs(p.position.y - position.y) > 1200:
+	if abs(p.position.y - position.y) > 1250:
 		if (p.position.y < position.y):
-			position.y -= 2200
+			position.y -= 2250
 		else:
-			position.y += 2200
+			position.y += 2250
 	#comment ehre
