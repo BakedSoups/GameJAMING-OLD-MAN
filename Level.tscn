@@ -119,10 +119,25 @@ polygon = PackedVector2Array(217, 870, 218, 1140, -651, 1140, -650, 863)
 
 [node name="Ladder" parent="." instance=ExtResource("2_j4tk6")]
 visible = false
-position = Vector2(302, -965)
-scale = Vector2(1, 4.24)
+position = Vector2(314, -1051)
+scale = Vector2(0.559999, 2.88)
 
 [node name="Ladder2" parent="." instance=ExtResource("2_j4tk6")]
 visible = false
-position = Vector2(157, -2102)
-scale = Vector2(1.14088, -4.01472)
+position = Vector2(175, -2005)
+scale = Vector2(1.14088, -5.77472)
+
+[node name="Ladder3" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(390, -2753)
+scale = Vector2(1.14088, -2.29471)
+
+[node name="Ladder4" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(643, -2767)
+scale = Vector2(1.14088, -2.29471)
+
+[node name="Ladder5" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(858, -2767)
+scale = Vector2(1.14088, -2.29471)
