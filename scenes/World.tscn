@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bi7admw643m2r"]
+[gd_scene load_steps=9 format=3 uid="uid://bi7admw643m2r"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_tqam4"]
 [ext_resource type="PackedScene" uid="uid://d0xgmqxwlk3x2" path="res://GameObjects/Player.tscn" id="1_yvskl"]
@@ -7,13 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://capyhmb3cadc0" path="res://GameObjects/wings.tscn" id="6_q1y0m"]
 [ext_resource type="Texture2D" uid="uid://cta4qrri2ghqj" path="res://Images/LiveReaction.svg" id="6_vhurx"]
 [ext_resource type="PackedScene" uid="uid://bklwbmg5im8qb" path="res://pause_menu.tscn" id="7_0sfb5"]
+[ext_resource type="PackedScene" uid="uid://bhf4qxuuuq23c" path="res://GameObjects/BootsIcon.tscn" id="8_fywe3"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_tqam4")
 
 [node name="Player" parent="." instance=ExtResource("1_yvskl")]
 top_level = true
-position = Vector2(-397, -10036)
+position = Vector2(-397, 5)
 scale = Vector2(1.2, 1.2)
 
 [node name="Level" parent="." instance=ExtResource("5_8qg1h")]
@@ -30,12 +31,19 @@ rotation = 3.14159
 scale = Vector2(-1.92, -1.45)
 texture = ExtResource("6_vhurx")
 
+[node name="BootsIcon" parent="Camera2D/Sprite2D" instance=ExtResource("8_fywe3")]
+visible = false
+position = Vector2(457.292, -166.205)
+scale = Vector2(1.04167, 1.36914)
+
 [node name="PauseMenu" parent="Camera2D" instance=ExtResource("7_0sfb5")]
 z_index = 1
 offset_left = -190.0
 offset_top = -79.0
 offset_right = -190.0
 offset_bottom = -79.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D"]
 
 [node name="Wings" parent="." instance=ExtResource("6_q1y0m")]
 position = Vector2(601, -202)

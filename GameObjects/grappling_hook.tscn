@@ -1,18 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbqf0ixapq2an"]
 
 [ext_resource type="Script" path="res://Scripts/grappling_hook.gd" id="1_jkvln"]
-[ext_resource type="Texture2D" uid="uid://dw3w4k7b1i3vt" path="res://icon.svg" id="2_hg58b"]
+[ext_resource type="Texture2D" uid="uid://6kbeva2kl7b2" path="res://Images/hook.png" id="2_4q7yt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybp1u"]
+size = Vector2(26.7381, 19.7475)
 
 [node name="GrapplingHook" type="Area2D"]
 script = ExtResource("1_jkvln")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_hg58b")
+position = Vector2(-24, -7)
+texture = ExtResource("2_4q7yt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 4.76837e-07)
+scale = Vector2(3.29118, 2.22813)
 shape = SubResource("RectangleShape2D_ybp1u")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

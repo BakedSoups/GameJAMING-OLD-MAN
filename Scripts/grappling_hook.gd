@@ -14,7 +14,7 @@ func hookDash():
 	p.dashing = true
 	p.velocity.y = 0
 	p.position.x  += p.lr * PLAYER_SPEED
-	if abs(p.position.x - position.x) < 30:
+	if abs(p.position.x - position.x) < 100:
 		queue_free()
 		p.dashing = false
 		p.hasFired = false
@@ -26,6 +26,10 @@ func _physics_process(delta):
 		setPos = true
 	if not dash:
 		position.x += p.lr * HOOK_SPEED
+		if p.lr == 1:
+			get_node("Sprite2D").set_flip_h(false)
+		else:
+			get_node("Sprite2D").set_flip_h(true)
 	elif dash:
 		hookDash()
 	if abs(position.x - pos1.x) > LENGTH:
@@ -34,11 +38,14 @@ func _physics_process(delta):
 	
 
 func _on_body_entered(body):
-	if body.is_in_group("Wall") and not dash:
-		dash = true
-	elif body.is_in_group("Player") and dash:
+	var p = get_parent().get_node("Player")
+	if body.is_in_group("Border"):
 		queue_free()
-		var p = get_parent().get_node("Player")
+		p.dashing = false
+	elif body.is_in_group("Wall") and not dash:
+		dash = true
+	elif body.is_in_group("Player") and dash and not p.is_on_wall():
+		queue_free()
 		p.dashing = false
 		p.hasFired = false
 		

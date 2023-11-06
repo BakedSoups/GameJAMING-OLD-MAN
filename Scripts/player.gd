@@ -31,9 +31,11 @@ var age = 0
 const YOUNG_SPEED = 800
 const ADULT_SPEED = 500
 const OLD_SPEED = 200
-const YOUNG_JUMP = -800
+const YOUNG_JUMP = -1000
 const ADULT_JUMP = 500
 const OLD_JUMP = 200
+
+var sound = preload("res://sounds/shoot.wav")
 
 func _ready():
 	ageMod()
@@ -54,6 +56,8 @@ func ageMod():
 
 func shoot():
 	if Input.is_action_just_pressed("ui_select") and not dashing and not hasFired:
+		$AudioStreamPlayer2D.stream = sound
+		$AudioStreamPlayer2D.play()
 		hasFired = true
 		velocity.y = 0
 		dashing = true

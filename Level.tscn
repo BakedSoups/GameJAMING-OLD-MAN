@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bt5s73nhjvfub"]
 
-[ext_resource type="Texture2D" uid="uid://cgchkhuiqbtoe" path="res://2level Final draft.png" id="1_vgf2j"]
+[ext_resource type="Texture2D" uid="uid://bp6skjykbi62t" path="res://Images/2level_FinaFINALl_draft.png" id="1_h5pmy"]
 [ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://Scripts/ladder.tscn" id="2_j4tk6"]
 
 [node name="Level" type="Node2D"]
@@ -8,7 +8,7 @@
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(642, -6782)
 scale = Vector2(1.69751, 1.79628)
-texture = ExtResource("1_vgf2j")
+texture = ExtResource("1_h5pmy")
 
 [node name="Ground+Platforms" type="StaticBody2D" parent="."]
 position = Vector2(642, -4465)
@@ -328,7 +328,7 @@ visible = false
 position = Vector2(351, -591)
 scale = Vector2(0.559999, 1.96)
 
-[node name="Border" type="StaticBody2D" parent="."]
+[node name="Border" type="StaticBody2D" parent="." groups=["Border"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border"]
 polygon = PackedVector2Array(47, 575, 46, -14140, 1237, -14139, 1236, 575, 1557, 582, 1563, -14414, -462, -14408, -392, 1199, 71, 1212)
