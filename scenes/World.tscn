@@ -15,7 +15,7 @@ script = ExtResource("1_tqam4")
 
 [node name="Player" parent="." instance=ExtResource("1_yvskl")]
 top_level = true
-position = Vector2(-445, 189)
+position = Vector2(-106, -453)
 scale = Vector2(1.2, 1.2)
 
 [node name="Level" parent="." instance=ExtResource("5_8qg1h")]

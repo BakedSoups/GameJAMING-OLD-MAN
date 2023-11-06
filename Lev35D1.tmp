@@ -489,7 +489,7 @@ visible = false
 position = Vector2(1061, -13587)
 scale = Vector2(0.799999, 1.40002)
 
-[node name="Decoration" type="AnimatableBody2D" parent="."]
+[node name="Decoration" type="StaticBody2D" parent="."]
 script = ExtResource("4_hf4nt")
 
 [node name="torch" type="AnimatedSprite2D" parent="Decoration"]
@@ -497,5 +497,5 @@ texture_filter = 1
 position = Vector2(1152, -3937)
 scale = Vector2(3.57575, 4.97075)
 sprite_frames = SubResource("SpriteFrames_5l8p6")
-frame_progress = 0.144395
+frame_progress = 0.0702056
 script = ExtResource("5_v5ygh")
