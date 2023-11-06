@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bi7admw643m2r"]
+[gd_scene load_steps=10 format=3 uid="uid://bi7admw643m2r"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_tqam4"]
 [ext_resource type="PackedScene" uid="uid://d0xgmqxwlk3x2" path="res://GameObjects/Player.tscn" id="1_yvskl"]
@@ -8,13 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://cta4qrri2ghqj" path="res://Images/LiveReaction.svg" id="6_vhurx"]
 [ext_resource type="PackedScene" uid="uid://bklwbmg5im8qb" path="res://pause_menu.tscn" id="7_0sfb5"]
 [ext_resource type="PackedScene" uid="uid://bhf4qxuuuq23c" path="res://GameObjects/BootsIcon.tscn" id="8_fywe3"]
+[ext_resource type="PackedScene" uid="uid://bfimtyo0ga0di" path="res://moveable_platform.tscn" id="9_e1iks"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_tqam4")
 
 [node name="Player" parent="." instance=ExtResource("1_yvskl")]
 top_level = true
-position = Vector2(-397, 5)
+position = Vector2(-445, 189)
 scale = Vector2(1.2, 1.2)
 
 [node name="Level" parent="." instance=ExtResource("5_8qg1h")]
@@ -47,3 +48,48 @@ offset_bottom = -79.0
 
 [node name="Wings" parent="." instance=ExtResource("6_q1y0m")]
 position = Vector2(601, -202)
+
+[node name="MoveablePlatform" parent="." instance=ExtResource("9_e1iks")]
+position = Vector2(-400, -3237)
+move_speed = 100.0
+move_dir = Vector2(200, -300)
+
+[node name="MoveablePlatform2" parent="." instance=ExtResource("9_e1iks")]
+position = Vector2(408, -4570)
+move_speed = 100.0
+move_dir = Vector2(0, 450)
+
+[node name="MoveablePlatform3" parent="." instance=ExtResource("9_e1iks")]
+position = Vector2(370, -9395)
+move_speed = 200.0
+move_dir = Vector2(0, -400)
+
+[node name="MoveablePlatform4" parent="." instance=ExtResource("9_e1iks")]
+position = Vector2(205, -12147)
+scale = Vector2(0.500001, 1.5)
+move_speed = 200.0
+move_dir = Vector2(300, 0)
+
+[node name="MoveablePlatform5" parent="." instance=ExtResource("9_e1iks")]
+position = Vector2(61, -12915)
+scale = Vector2(0.780001, 1.5)
+move_speed = 200.0
+move_dir = Vector2(-600, -450)
+
+[node name="MoveablePlatform6" parent="." instance=ExtResource("9_e1iks")]
+position = Vector2(-189, -14068)
+scale = Vector2(0.540003, 1.5)
+move_speed = 500.0
+move_dir = Vector2(-400, -450)
+
+[node name="MoveablePlatform7" parent="." instance=ExtResource("9_e1iks")]
+position = Vector2(134, -14693)
+scale = Vector2(0.420003, 1.5)
+move_speed = 400.0
+move_dir = Vector2(250, -100)
+
+[node name="MoveablePlatform8" parent="." instance=ExtResource("9_e1iks")]
+position = Vector2(-488, -15375)
+scale = Vector2(0.380003, 1.5)
+move_speed = 350.0
+move_dir = Vector2(250, 0)

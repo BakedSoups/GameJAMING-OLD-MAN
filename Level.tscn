@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt5s73nhjvfub"]
+[gd_scene load_steps=4 format=3 uid="uid://bt5s73nhjvfub"]
 
 [ext_resource type="Texture2D" uid="uid://bp6skjykbi62t" path="res://Images/2level_FinaFINALl_draft.png" id="1_h5pmy"]
+[ext_resource type="PackedScene" uid="uid://sjsk5ayyaq61" path="res://platform.tscn" id="2_e8u3h"]
 [ext_resource type="PackedScene" uid="uid://ddnqakujh1vdt" path="res://Scripts/ladder.tscn" id="2_j4tk6"]
 
 [node name="Level" type="Node2D"]
@@ -168,7 +169,7 @@ polygon = PackedVector2Array(-149, -427, -149, -284, 361, -281, 360, -422)
 
 [node name="Ground12" type="CollisionPolygon2D" parent="Ground+Platforms/Ground12/StaticBody2D"]
 position = Vector2(235, -961)
-polygon = PackedVector2Array(-84, -429, -90, 27, -51, 26, -53, -428)
+polygon = PackedVector2Array(-84, -429, -90, -29, -50, -30, -53, -428)
 
 [node name="Ground13" type="CollisionPolygon2D" parent="Ground+Platforms"]
 polygon = PackedVector2Array(-149, -427, -149, -284, 361, -281, 360, -422)
@@ -323,6 +324,53 @@ polygon = PackedVector2Array(-149, -427, -149, -284, 361, -281, 360, -422)
 position = Vector2(-116, -8523)
 polygon = PackedVector2Array(-482, -127, -481, -2, -106, -7, -104, -121)
 
+[node name="Platform13" parent="Ground+Platforms" instance=ExtResource("2_e8u3h")]
+visible = false
+position = Vector2(-512, -1085)
+scale = Vector2(0.685111, 1.25774)
+
+[node name="Platform14" parent="Ground+Platforms" instance=ExtResource("2_e8u3h")]
+visible = false
+position = Vector2(-511, -1218)
+scale = Vector2(0.685111, 1.25774)
+
+[node name="Platform15" parent="Ground+Platforms" instance=ExtResource("2_e8u3h")]
+visible = false
+position = Vector2(-459, -1336)
+scale = Vector2(1.12511, 1.25774)
+
+[node name="Platform16" parent="Ground+Platforms" instance=ExtResource("2_e8u3h")]
+visible = false
+position = Vector2(-169, 391)
+scale = Vector2(1.12511, 1.25774)
+
+[node name="Platform17" parent="Ground+Platforms" instance=ExtResource("2_e8u3h")]
+visible = false
+position = Vector2(221, 389)
+scale = Vector2(1.12511, 1.25774)
+
+[node name="Platform18" parent="Ground+Platforms" instance=ExtResource("2_e8u3h")]
+visible = false
+position = Vector2(540, -6407)
+scale = Vector2(0.639538, -1.25774)
+
+[node name="Ground30" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(295, -9507, 295, -9332, 594, -9330, 595, -9509)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground+Platforms/Ground30" groups=["Wall"]]
+
+[node name="Ground30" type="CollisionPolygon2D" parent="Ground+Platforms/Ground30/StaticBody2D"]
+polygon = PackedVector2Array(295, -9507, 295, -9332, 594, -9330, 595, -9509)
+
+[node name="Ground31" type="CollisionPolygon2D" parent="Ground+Platforms"]
+polygon = PackedVector2Array(295, -9507, 295, -9332, 594, -9330, 595, -9509)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground+Platforms/Ground31" groups=["Wall"]]
+
+[node name="Ground31" type="CollisionPolygon2D" parent="Ground+Platforms/Ground31/StaticBody2D"]
+position = Vector2(-358, 3)
+polygon = PackedVector2Array(-239, -9508, -238, -9336, 594, -9330, 595, -9509)
+
 [node name="Ladder" parent="." instance=ExtResource("2_j4tk6")]
 visible = false
 position = Vector2(351, -591)
@@ -352,3 +400,38 @@ scale = Vector2(0.559999, 1.64)
 visible = false
 position = Vector2(858, -2023)
 scale = Vector2(0.559999, 1.64)
+
+[node name="Ladder6" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(369, -5931)
+scale = Vector2(0.559999, 0.36)
+
+[node name="Ladder7" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(471, -5952)
+scale = Vector2(0.559999, 0.36)
+
+[node name="Ladder8" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(310, -8618)
+scale = Vector2(0.559999, 0.95998)
+
+[node name="Ladder9" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(568, -9180)
+scale = Vector2(0.559999, 1.23996)
+
+[node name="Ladder10" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(874, -9270)
+scale = Vector2(0.559999, 0.719941)
+
+[node name="Ladder11" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(342, -9608)
+scale = Vector2(0.559999, 0.639942)
+
+[node name="Ladder12" parent="." instance=ExtResource("2_j4tk6")]
+visible = false
+position = Vector2(1061, -13587)
+scale = Vector2(0.799999, 1.40002)
