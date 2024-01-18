@@ -5,6 +5,7 @@ worked with with a team of 4 people to make a video game in 2 days with the them
 This game shows the story of a man devote his whole life to climbing a wall
 
 ## Features
-A timer that just stops 
-Invisible platforms
-broken speed run techs that are definetly intended 
+- timer that just stops 
+- Invisible platforms
+- broken speed run techs that are definetly intended
+
